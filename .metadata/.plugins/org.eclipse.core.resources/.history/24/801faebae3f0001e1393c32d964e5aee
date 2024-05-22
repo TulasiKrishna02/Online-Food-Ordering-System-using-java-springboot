@@ -1,0 +1,110 @@
+package com.tulasi.service;
+
+import java.time.LocalDateTime;
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.tulasi.dto.RestaurantDto;
+import com.tulasi.model.Address;
+import com.tulasi.model.Restaurant;
+import com.tulasi.model.User;
+import com.tulasi.repository.AddressRepository;
+import com.tulasi.repository.RestaurantRepository;
+import com.tulasi.request.CreateRestauarantRequest;
+
+@Service
+public class RestaurantServiceImp implements RestaurantService{
+
+	@Autowired
+	private RestaurantRepository restaurantRepository;
+	
+	@Autowired
+	private AddressRepository addressRepository;
+	
+	@Autowired
+	private UserService userService;
+	@Override
+	public Restaurant createRestaurant(CreateRestauarantRequest req, User user) {
+		
+		Address address=addressRepository.save(req.getAddress());
+		
+		Restaurant restaurant=new Restaurant();
+		restaurant.setAddress(address);
+		restaurant.setContactInformation(req.getContactInformation());
+		restaurant.setCuisineType(req.getCuisineType());
+		restaurant.setDescription(req.getDescription());
+		restaurant.setImages(req.getImages());
+		restaurant.setName(req.getName());
+		restaurant.setOpeningHours(req.getOpningHourse());
+		restaurant.setRegistrationDate(LocalDateTime.now());
+		restaurant.setOwner(user);
+		
+		return restaurantRepository.save(restaurant);
+	}
+
+	@Override
+	public Restaurant updateRestaurant(Long restaurantId, CreateRestauarantRequest updatedRestaurant) throws Exception {
+		Restaurant restaurant=findRestaurantById(restaurantId);
+		
+		
+		if(restaurant.getCuisineType()!=null) {
+			restaurant.setCuisineType(updatedRestaurant.getCuisineType());
+		}
+		if(restaurant.getDescription()!=null) {
+			restaurant.setDescription(updatedRestaurant.getDescription());
+		}
+		if(restaurant.getName()!=null) {
+			restaurant.setName(updatedRestaurant.getName());
+		}
+		
+		return restaurantRepository.save(restaurant);
+	}
+
+	@Override
+	public void deleteRestaurant(Long restaurantId) throws Exception {
+		
+		Restaurant restaurant=findRestaurantById(restaurantId);
+		
+		restaurantRepository.delete(restaurant);
+		
+	}
+
+	@Override
+	public List<Restaurant> getAllRestaurants() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Restaurant> searchRestaurants() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Restaurant findRestaurantById(Long id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Restaurant getRestaurantByUserId(Long userId) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public RestaurantDto addToFavorites(Long restaurantId, User user) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Restaurant updatRestaurantStatus(Long id) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

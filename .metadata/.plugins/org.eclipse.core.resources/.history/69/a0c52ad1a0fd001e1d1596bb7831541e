@@ -1,0 +1,5 @@
+package net.javaguides.banking.service.impl;
+
+public class AccountServiceImpl {
+
+}

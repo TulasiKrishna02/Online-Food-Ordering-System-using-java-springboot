@@ -1,0 +1,19 @@
+package com.tulasiskillhub.taskproject1.controller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api")
+public class TaskController {
+	
+	//save the task
+	
+	//get all task
+	
+	//get indi task
+	
+	
+	//delete indiv task
+  
+}

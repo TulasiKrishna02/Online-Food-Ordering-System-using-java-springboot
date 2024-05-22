@@ -1,0 +1,5 @@
+package com.tulasi.model;
+
+public class Address {
+
+}

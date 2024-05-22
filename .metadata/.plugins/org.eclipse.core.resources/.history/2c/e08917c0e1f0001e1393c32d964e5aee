@@ -1,0 +1,25 @@
+package com.tulasi.request;
+
+import java.util.List;
+
+import com.tulasi.model.Address;
+import com.tulasi.model.ContactInformation;
+
+import lombok.Data;
+
+@Data
+public class CreateRestauarantRequest {
+	
+	
+	private long id;
+	private String name;
+	private String description;
+	private String cuisineType;
+	private Address address;
+	private ContactInformation contactInformation;
+	private String opningHourse;
+	private List<String> images;
+
+	
+
+}

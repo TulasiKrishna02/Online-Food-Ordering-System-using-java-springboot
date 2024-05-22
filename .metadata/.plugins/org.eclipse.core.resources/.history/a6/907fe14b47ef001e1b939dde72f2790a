@@ -1,0 +1,11 @@
+package com.tulasi.model;
+
+
+
+public class Restaurant {
+	
+	/*@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private long id;*/
+
+}

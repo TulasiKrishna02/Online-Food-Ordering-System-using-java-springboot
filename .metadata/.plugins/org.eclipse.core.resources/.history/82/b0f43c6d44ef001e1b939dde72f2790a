@@ -1,0 +1,7 @@
+package com.tulasi.model;
+
+@Entity
+
+public class Address {
+
+}

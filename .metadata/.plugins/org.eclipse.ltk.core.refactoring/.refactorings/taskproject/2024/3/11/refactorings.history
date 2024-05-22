@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.teluguskillhub.taskproject.service.taskService&apos; to &apos;TaskService&apos;&#x0D;&#x0A;- Original project: &apos;taskproject&apos;&#x0D;&#x0A;- Original element: &apos;com.teluguskillhub.taskproject.service.taskService&apos;&#x0D;&#x0A;- Renamed element: &apos;com.teluguskillhub.taskproject.service.TaskService&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;taskService&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.teluguskillhub.taskproject.service{taskService.java[taskService" matchStrategy="1" name="TaskService" qualified="false" references="true" similarDeclarations="false" stamp="1710325928092" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,5 @@
+package com.tulasiskillhub.taskproject1.security;
+
+public class CustomUserDetailsService {
+
+}

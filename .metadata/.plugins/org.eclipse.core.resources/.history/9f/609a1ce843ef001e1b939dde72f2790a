@@ -1,0 +1,5 @@
+package com.tulasi.dto;
+
+public class RestaurantDto {
+
+}

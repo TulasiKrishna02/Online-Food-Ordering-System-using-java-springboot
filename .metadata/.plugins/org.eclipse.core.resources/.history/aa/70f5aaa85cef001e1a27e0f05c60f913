@@ -1,0 +1,5 @@
+package com.tulasi.repository;
+
+public interface UserRepository {
+
+}

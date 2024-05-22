@@ -1,0 +1,5 @@
+package com.tulasi.service;
+
+public interface RestaurantService {
+
+}

@@ -1,0 +1,5 @@
+package net.javaguides.banking.service;
+
+public interface AccountService {
+
+}

@@ -1,0 +1,15 @@
+package com.tulasi.service;
+
+import com.tulasi.model.Restaurant;
+import com.tulasi.model.User;
+import com.tulasi.request.CreateRestauarantRequest;
+
+public interface RestaurantService {
+	
+	public Restaurant createRestaurant(CreateRestauarantRequest req,User user) ;
+		
+		
+		
+		
+
+}
